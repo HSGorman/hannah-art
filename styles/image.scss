@@ -1,0 +1,13 @@
+$small: 300px;
+$medium: 900px;
+
+img {
+    @media screen and (max-width: $small) {
+        max-width: 98%;
+        max-height: 100%;
+    }
+    @media screen and (min-width: $medium) {
+        max-width: 98%;
+        max-height: 100%;
+    }
+}
