@@ -8,7 +8,7 @@ export interface TopBarProps { }
 export const TopBar: React.VFC<TopBarProps> = () => {
 	const navigate = useNavigate();
 
-	const pages = ['Contact', 'Pricing', 'Gallery', 'FAQ', 'About'];
+	const pages = ['Home', 'Contact', 'Pricing', 'Gallery', 'FAQ', 'About'];
 	const socialmedia: string[] = [];
 	const siteName = 'Hannah Gorman Paintings';
 

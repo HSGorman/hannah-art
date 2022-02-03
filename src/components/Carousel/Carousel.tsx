@@ -15,7 +15,7 @@ export const Carousel = () => {
 
   return (
     <Fragment>
-      <Box sx={{ flexGrow: 1, m: 0, display: { xs: 'flex', md: 'none' } }}>
+      <Box sx={{ flexGrow: 1, m: 3, display: { xs: 'flex', md: 'none' } }}>
         <Swiper modules={[EffectCube, Autoplay]} effect="cube"
           spaceBetween={1}
           slidesPerView={1}

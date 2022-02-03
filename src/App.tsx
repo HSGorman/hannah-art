@@ -29,6 +29,7 @@ function App() {
           <body>
             <Routes>
               <Route path="/" element={<Carousel />} />
+              <Route path="/Home" element={<Carousel />} />
               <Route path="/Contact" element={<ContactMe />} />
               <Route path="/Pricing" element={<Pricing />} />
               <Route path="/Gallery" element={<Gallery />} />
