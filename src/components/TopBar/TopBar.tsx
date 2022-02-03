@@ -1,10 +1,13 @@
 import { AppBar, Box, Button, Container, Divider, Grid, IconButton, Menu, MenuItem, Slide, ThemeProvider, Toolbar, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router";
+
 export interface TopBarProps { }
 
-
 export const TopBar: React.VFC<TopBarProps> = () => {
+	const navigate = useNavigate();
+
 	const pages = ['Contact', 'Pricing', 'Gallery', 'FAQ', 'About'];
 	const socialmedia: string[] = [];
 	const siteName = 'Hannah Gorman Paintings';
@@ -25,6 +28,17 @@ export const TopBar: React.VFC<TopBarProps> = () => {
 	const handleCloseUserMenu = () => {
 		setAnchorElUser(null);
 	};
+
+	const changePageCloseNav = (page: string) => {
+		navigate(page);
+		handleCloseNavMenu();
+	}
+	
+	const changePageCloseNavMenu = (page: string) => {
+		navigate(page);
+		handleCloseNavMenu();
+	}
+
 	const containerRef = useRef(null);
 
 	return (
@@ -61,7 +75,10 @@ export const TopBar: React.VFC<TopBarProps> = () => {
 							}}
 						>
 							{pages.map((page) => (
-								<MenuItem key={page} onClick={handleCloseNavMenu}>
+								<MenuItem
+									key={page}
+									onClick={() => changePageCloseNavMenu(page)}
+								>
 									<Typography textAlign="center">{page}</Typography>
 								</MenuItem>
 							))}
@@ -80,23 +97,10 @@ export const TopBar: React.VFC<TopBarProps> = () => {
 							<Button
 								size="large"
 								key={page}
-								onClick={handleCloseNavMenu}
+								onClick={() => {changePageCloseNav(page)}}
 								sx={{ my: 2, color: 'white', display: 'block' }}
 							>
 								{page}
-							</Button>
-						))}
-					</Box>
-
-					<Box sx={{ flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'none', md: 'flex' } }}>
-						{socialmedia.map((sociallink) => (
-							<Button
-								size="medium"
-								key={sociallink}
-								onClick={handleCloseNavMenu}
-								sx={{ my: 2, color: 'white', display: 'block' }}
-							>
-								{sociallink}
 							</Button>
 						))}
 					</Box>
@@ -105,3 +109,7 @@ export const TopBar: React.VFC<TopBarProps> = () => {
 		</AppBar>
 	);
 };
+function useHistory() {
+	throw new Error("Function not implemented.");
+}
+

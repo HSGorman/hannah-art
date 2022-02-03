@@ -6,6 +6,12 @@ import { Carousel } from './components/Carousel'
 import { ThemeProvider, useTheme } from '@emotion/react'
 import themeOptions from './AppTheme'
 import { createTheme } from '@mui/material'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ContactMe } from './components/ContactMe'
+import { About } from './components/About'
+import { Faq } from './components/Faq'
+import { Gallery } from './components/Gallery'
+import { Pricing } from './components/Pricing'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,14 +21,22 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-      <header className="App-header">
-        <TopBar>
-
-        </TopBar>
-      </header>
-      <body>
-        <Carousel/>
-      </body>
+        <BrowserRouter>
+          <header className="App-header">
+            <TopBar>
+            </TopBar>
+          </header>
+          <body>
+            <Routes>
+              <Route path="/" element={<Carousel />} />
+              <Route path="/Contact" element={<ContactMe />} />
+              <Route path="/Pricing" element={<Pricing />} />
+              <Route path="/Gallery" element={<Gallery />} />
+              <Route path="/Faq" element={<Faq />} />
+              <Route path="/About" element={<About />} />
+            </Routes>
+          </body>
+        </BrowserRouter>
       </ThemeProvider>
     </div>
   )

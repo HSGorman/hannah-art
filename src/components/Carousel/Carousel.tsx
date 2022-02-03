@@ -37,7 +37,7 @@ export const Carousel = () => {
       </Box>
 
       <Box sx={{ mx: 11, m: 3, flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-        <Swiper modules={[EffectCube, Autoplay]} effect="cube"
+        <Swiper modules={[EffectCube, Autoplay]} 
           spaceBetween={1}
           slidesPerView={4}
           onSlideChange={() => console.log('slide change')}
