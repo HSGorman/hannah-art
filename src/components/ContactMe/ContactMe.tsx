@@ -1,9 +1,16 @@
-import { Grid, MenuItem, TextField, Typography } from "@mui/material";
+import { Button, Grid, MenuItem, TextField, Typography } from "@mui/material";
+import { Faq } from "../Faq";
+import { Link } from 'react-router-dom';
+import '../../../styles/image.scss';
+import { flexbox } from "@mui/system";
+import { ContactMeLarge } from "./ContactMeLarge";
+import { ContactMeSmall } from "./ContactMeSmall";
 
 export interface ContactMeProps { }
 
 export const ContactMe: React.VFC<ContactMeProps> = () => {
-	const options = ['A5 Canvas', 'A4 Canvas', 'A3 Canvas', 'A2 Canvas', 'Canvas board', 'Stretched Canvas'];
+	const sizeOptions = ['A5 Canvas', 'A4 Canvas', 'A3 Canvas', 'A2 Canvas'];
+	const canvasOptions = ['Canvas board', 'Stretched Canvas'];
 
 	return (
 		<Grid container>
@@ -12,30 +19,11 @@ export const ContactMe: React.VFC<ContactMeProps> = () => {
 					Contact Me!
 				</Typography>
 			</Grid>
-			<Grid item xs={12}>
-				<TextField
-					label="Name"
-				/>
+			<Grid item xs={12} sx={{ display: { xs: 'none', md: 'flex' } }}>
+				<ContactMeLarge sizeOptions={sizeOptions} canvasOptions={canvasOptions}/>
 			</Grid>
-			<Grid item xs={12}>
-				<TextField
-					label="EMail"
-				/>
-			</Grid>
-			<Grid item xs={12} sx={{m: 3}}>
-				<TextField
-					select
-					label="Select"
-					value={'A5 Canvas'}
-				>
-					{options.map((option) => (
-						<MenuItem
-							key={option}
-							value={option}>
-							{option}
-						</MenuItem>
-					))}
-				</TextField>
+			<Grid item xs={12} sx={{ display: { xs: 'flex', md: 'none' } }}>
+				<ContactMeSmall sizeOptions={sizeOptions} canvasOptions={canvasOptions}/>
 			</Grid>
 		</Grid>
 	);
