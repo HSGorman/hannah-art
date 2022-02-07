@@ -14,16 +14,16 @@ export const ContactMe: React.VFC<ContactMeProps> = () => {
 
 	return (
 		<Grid container>
-			<Grid item xs={12}>
-				<Typography variant="h2">
+			<Grid item xs={11}>
+				<Typography variant="h3">
 					Contact Me!
 				</Typography>
 			</Grid>
 			<Grid item xs={12} sx={{ display: { xs: 'none', md: 'flex' } }}>
-				<ContactMeLarge sizeOptions={sizeOptions} canvasOptions={canvasOptions}/>
+				<ContactMeLarge sizeOptions={sizeOptions} canvasOptions={canvasOptions} />
 			</Grid>
 			<Grid item xs={12} sx={{ display: { xs: 'flex', md: 'none' } }}>
-				<ContactMeSmall sizeOptions={sizeOptions} canvasOptions={canvasOptions}/>
+				<ContactMeSmall sizeOptions={sizeOptions} canvasOptions={canvasOptions} />
 			</Grid>
 		</Grid>
 	);

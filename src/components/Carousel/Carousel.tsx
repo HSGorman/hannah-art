@@ -11,11 +11,11 @@ import { Fragment } from 'react';
 import { EffectCube, Autoplay } from 'swiper';
 
 export const Carousel = () => {
-  const sampleImages = ['./PaintBrush.jpeg', './Otis.jpeg', './Cow.jpeg', './Boy.jpeg', './Mum.jpeg']
+  const sampleImages = ['./PaintBrush.jpeg', './Otis.jpeg', './Cow.jpeg', './Boy.jpeg', './Water.jpeg']
 
   return (
     <Fragment>
-      <Box sx={{ flexGrow: 1, m: 3, display: { xs: 'flex', md: 'none' } }}>
+      <Box sx={{ flexGrow: 1, m: 1, display: { xs: 'flex', md: 'none' } }}>
         <Swiper modules={[EffectCube, Autoplay]} effect="cube"
           spaceBetween={1}
           slidesPerView={1}
@@ -31,7 +31,7 @@ export const Carousel = () => {
           <SwiperSlide><img src='./small-Boy.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./small-Otis.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./small-Cow.jpeg' /></SwiperSlide>
-          <SwiperSlide><img src='./small-Mum.jpeg' /></SwiperSlide>
+          <SwiperSlide><img src='./small-Water.jpeg' /></SwiperSlide>
 
         </Swiper>
       </Box>
@@ -52,7 +52,7 @@ export const Carousel = () => {
           <SwiperSlide><img src='./Boy.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./Otis.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./Cow.jpeg' /></SwiperSlide>
-          <SwiperSlide><img src='./Mum.jpeg' /></SwiperSlide>
+          <SwiperSlide><img src='./Water.jpeg' /></SwiperSlide>
         </Swiper>
       </Box>
     </Fragment>

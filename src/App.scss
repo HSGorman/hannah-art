@@ -40,3 +40,15 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+h1 {
+  align-self: center;
+}
+
+.right {
+  align-self: flex-end;
+}
+
+.flex {
+  display: flex;
+}

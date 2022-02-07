@@ -11,7 +11,7 @@ const themeOptions: ThemeOptions = {
   },
   typography: {
     fontFamily: 'Roboto',
-    h6: {
+    h3: {
       fontFamily: 'Comforter',
     },
   },
