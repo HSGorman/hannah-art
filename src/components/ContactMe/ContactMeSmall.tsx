@@ -56,7 +56,7 @@ export const ContactMeSmall: React.VFC<ContactMeSmallProps> = ({sizeOptions, can
 						))}
 					</TextField>
 				</Grid>
-				<Typography sx={{ ml: 2, mr: 2 }}>I will paint most things, however I need a good reference photo to create a good painting.</Typography>
+				<Typography sx={{ ml: 2, mr: 2 }}>I will paint most things, however, I need a good reference photo to create a good painting.</Typography>
 				<Grid item xs={12} sx={{ m: 2 }}>
 					<Link to="/Faq">See what makes a good reference photograph.</Link>
 				</Grid>

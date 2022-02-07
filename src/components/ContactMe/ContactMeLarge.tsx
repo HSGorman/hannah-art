@@ -43,7 +43,7 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 								</MenuItem>
 							))}
 						</TextField>
-						<Typography sx={{ m: 3 }}>I will paint most things, however I need a good reference photo to create a good painting.</Typography>
+						<Typography sx={{ m: 3 }}>I will paint most things, however, I need a good reference photo to create a good painting.</Typography>
 						<Link to="/Faq">See what makes a good reference photograph.</Link>
 					</Grid>
 					<Grid item xs={12} sx={{ ml: 2, mr: 2, mt: 1, mb: 1 }}>

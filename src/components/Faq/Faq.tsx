@@ -12,7 +12,7 @@ export const Faq: React.VFC<FaqProps> = () => {
 
 	return (
 		<>
-			<Typography variant="h3">
+			<Typography variant="h3" sx={{m:2}}>
 					Frequently Asked Questions
 				</Typography>
 			<Paper>
@@ -25,10 +25,10 @@ export const Faq: React.VFC<FaqProps> = () => {
 					</AccordionSummary>
 					<AccordionDetails>
 						<Typography>
-							The most important thing is lighing.
+							The most important thing is lighting.
 							Darks and lights must be present.
 							Try to pick a photo with an obvious light source.
-							Choose clear well focused photos.
+							Choose clear, well focused photos.
 							Choose an interesting photo and pay attention to the angle of the subject matter.
 						</Typography>
 					</AccordionDetails>
@@ -42,7 +42,7 @@ export const Faq: React.VFC<FaqProps> = () => {
 					</AccordionSummary>
 					<AccordionDetails>
 						<Typography>
-							It depending on the size and the painting, but will be a minimum of two weeks.
+							It depends on the size and the painting, but will be a minimum of two weeks.
 						</Typography>
 					</AccordionDetails>
 				</Accordion>
@@ -55,8 +55,8 @@ export const Faq: React.VFC<FaqProps> = () => {
 					</AccordionSummary>
 					<AccordionDetails>
 						<Typography>
-							It is normally shipped by Royal Mail depending on the size postage starts ar £2.50.
-							Within the UK it takes around 3 days.
+							It is normally shipped by Royal Mail. Postage depends on the size and starts at £2.50.
+							Within the UK, it takes around 3 days.
 						</Typography>
 					</AccordionDetails>
 				</Accordion>

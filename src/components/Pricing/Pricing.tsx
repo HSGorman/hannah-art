@@ -28,7 +28,7 @@ export const Pricing: React.VFC<PricingProps> = () => {
 						<p>£250</p>
 					</Stack>
 					<Stack direction="row" spacing={1}>
-						<p>If you have any questions about pricing please contact me by the using the contact form.</p>
+						<p>If you have any questions about pricing, please contact me by the using the contact form.</p>
 					</Stack>
 				</Stack>
 			</Paper>
