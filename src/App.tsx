@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <BrowserRouter basename='/hannah-art'>
           <header className="App-header">
             <TopBar>
             </TopBar>
@@ -29,6 +29,7 @@ function App() {
           <body>
             <Routes>
               <Route path="/" element={<Carousel />} />
+              <Route path="/hannah-art" element={<Carousel />} />
               <Route path="/Home" element={<Carousel />} />
               <Route path="/Contact" element={<ContactMe />} />
               <Route path="/Pricing" element={<Pricing />} />
