@@ -1,6 +1,6 @@
 {
   "name": "hannah-art",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.io/HSGorman/hannah-art",
   "scripts": {
     "predeploy": "npm run build",
