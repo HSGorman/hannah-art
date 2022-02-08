@@ -2,8 +2,8 @@ import { Button, Grid, MenuItem, TextField, Typography } from "@mui/material";
 import { Link } from 'react-router-dom';
 import '../../../styles/image.scss';
 import '../../../styles/shadow-drop.scss';
-import { flexbox } from "@mui/system";
 import { useState } from "react";
+import { sendEmail } from "../../SendMail";
 
 export interface ContactMeLargeProps {
 	sizeOptions: string[],
@@ -14,6 +14,11 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 
 	const [sizes] = useState(sizeOptions);
 	const [canvasTypes] = useState(canvasOptions);
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [canvasType, setCanvasType] = useState("");
+	const [canvasSize, setCanvasSize] = useState("");
+	const [additional, setAdditional] = useState("");
 
 	return (
 		<Grid container>
@@ -23,17 +28,26 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 			<Grid item xs={4}>
 				<Grid container >
 					<Grid item xs={12} sx={{ ml: 2, mr: 2, mt: 1, mb: 1 }}>
-						<TextField fullWidth label="Name" />
+						<TextField
+							fullWidth
+							label="Name"
+							value={name}
+							onChange={(e) => {setName(e.target.value)}}/>
 					</Grid>
 					<Grid item xs={12} sx={{ ml: 2, mr: 2, mt: 1, mb: 1 }}>
-						<TextField fullWidth label="EMail"
-						/>
+						<TextField 
+							fullWidth
+							label="EMail"
+							autoComplete="email"
+							value={email}
+							onChange={(e) => {setEmail(e.target.value)}}/>
 					</Grid>
 					<Grid item xs={12} sx={{ ml: 2, mr: 2, mt: 1, mb: 1 }}>
 						<TextField fullWidth
 							select
 							label="Canvas Type"
-							value={'Canvas Board'}
+							value={canvasType}
+							onChange={(e) => {setCanvasType(e.target.value)}}
 						>
 							{canvasTypes.map((option) => (
 								<MenuItem
@@ -50,7 +64,8 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 					<TextField fullWidth
 						select
 						label="Canvas Size"
-						value={'A5'}
+						value={canvasSize}
+						onChange={(e) => {setCanvasSize(e.target.value)}}
 					>
 						{sizes.map((option) => (
 							<MenuItem
@@ -65,10 +80,17 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 					<Grid item xs={12} sx={{ ml: 2, mr: 2, mt: 1, mb: 2 }}>
 						<TextField fullWidth
 							label="Additional information"
+							value={additional}
+							onChange={(e) => {setAdditional(e.target.value)}}
 						/>
 					</Grid>
 					<Grid item xs={12} sx={{ ml: 3, mr: 3 }} >
-						<Button variant="contained" fullWidth >Send</Button>
+						<Button
+							variant="contained"
+							fullWidth
+							onClick={(e) => {
+								sendEmail(name, email, canvasType, canvasSize, additional);
+							}}>Send</Button>
 					</Grid>
 				</Grid>
 			</Grid>
