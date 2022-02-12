@@ -17,8 +17,8 @@ function App() {
   const [count, setCount] = useState(0);
 
   const theme = createTheme(themeOptions);
-  const baseUrl = "hannah-art";
-  // const baseUrl = "";
+  // const baseUrl = "hannah-art";
+  const baseUrl = "";
 
   return (
     <div className="App">

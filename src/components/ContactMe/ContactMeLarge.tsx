@@ -25,7 +25,7 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 			<Grid item xs={3} sx={{ mx: 11, m: 3, flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 				<img src='./small-Car.jpeg' className="shadow-drop" />
 			</Grid>
-			<Grid item xs={4}>
+			<Grid item xs={4} sx={{ m: 11}}>
 				<Grid container >
 					<Grid item xs={12} sx={{ ml: 2, mr: 2, mt: 1, mb: 1 }}>
 						<TextField

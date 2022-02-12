@@ -14,7 +14,7 @@ export const ContactMe: React.VFC<ContactMeProps> = () => {
 
 	return (
 		<Grid container>
-			<Grid item xs={11}>
+			<Grid item xs={11} sx={{ m: 1}}>
 				<Typography variant="h3">
 					Contact Me!
 				</Typography>

@@ -9,6 +9,7 @@ import '@fontsource/roboto/700.css';
 import '../styles/bounce.scss';
 import '../styles/fancy.scss';
 import '../styles/SwiperSize.scss';
+import '../styles/table.scss';
 
 ReactDOM.render(
   <React.StrictMode>

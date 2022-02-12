@@ -42,7 +42,7 @@ export const Faq: React.VFC<FaqProps> = () => {
 					</AccordionSummary>
 					<AccordionDetails>
 						<Typography>
-							It depends on the size and the painting, but will be a minimum of two weeks.
+							It depends on the size and the painting, but it will be a minimum of two weeks.
 						</Typography>
 					</AccordionDetails>
 				</Accordion>
