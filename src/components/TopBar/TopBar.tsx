@@ -33,7 +33,7 @@ export const TopBar: React.VFC<TopBarProps> = () => {
 		navigate(page);
 		handleCloseNavMenu();
 	}
-	
+
 	const changePageCloseNavMenu = (page: string) => {
 		navigate(page);
 		handleCloseNavMenu();
@@ -56,6 +56,7 @@ export const TopBar: React.VFC<TopBarProps> = () => {
 						>
 							<MenuIcon />
 						</IconButton>
+						
 						<Menu
 							id="menu-appbar"
 							anchorEl={anchorElNav}
@@ -90,20 +91,26 @@ export const TopBar: React.VFC<TopBarProps> = () => {
 						</Menu>
 					</Box>
 
-					<h2 className="fancy">{siteName}</h2>
-
 					<Box sx={{ mx: 11, flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+
 						{pages.map((page) => (
 							<Button
 								size="large"
 								key={page}
-								onClick={() => {changePageCloseNav(page)}}
+								onClick={() => { changePageCloseNav(page) }}
 								sx={{ my: 2, color: 'white', display: 'block' }}
 							>
 								{page}
 							</Button>
 						))}
 					</Box>
+
+					<h2 className="fancy">{siteName}</h2>
+
+					<Grid sx={{ m: 2 }}>
+						<img src="../../../public/Logo1-small.png" />
+					</Grid>
+					
 				</Toolbar>
 			</Container>
 		</AppBar>
