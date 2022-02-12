@@ -23,7 +23,7 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 	return (
 		<Grid container>
 			<Grid item xs={3} sx={{ mx: 11, m: 3, flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-				<img src='./small-Car.jpeg' className="shadow-drop" />
+				<img src='./PaintBrush.jpeg' className="shadow-drop" />
 			</Grid>
 			<Grid item xs={4} sx={{ m: 11}}>
 				<Grid container >
@@ -95,7 +95,7 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 				</Grid>
 			</Grid>
 			<Grid item xs={3} sx={{ mx: 11, m: 3, flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-				<img src='./small-Car2.jpeg' className="shadow-drop" />
+				<img src='./PaintBrush.jpeg' className="shadow-drop" />
 			</Grid>
 		</Grid>
 	);

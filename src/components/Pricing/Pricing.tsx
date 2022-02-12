@@ -15,7 +15,7 @@ export const Pricing: React.VFC<PricingProps> = () => {
 		<>
 			<Paper>
 				<Typography variant="h3" sx={{ m:1 }}>
-					Pricing {prices.length}
+					Pricing
 				</Typography>
 				<TableContainer component={Paper}>
 					<Table>

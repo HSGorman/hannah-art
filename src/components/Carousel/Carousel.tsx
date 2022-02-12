@@ -13,7 +13,7 @@ import { Fragment } from 'react';
 import { EffectCube, Autoplay } from 'swiper';
 
 export const Carousel = () => {
-  const sampleImages = ['./PaintBrush.jpeg', './Otis.jpeg', './Cow.jpeg', './Boy.jpeg', './Water.jpeg']
+  const sampleImages = ['./Otis.jpeg', './Cow.jpeg', './Boy.jpeg', './Water.jpeg']
 
   return (
     <Fragment>
@@ -30,7 +30,6 @@ export const Carousel = () => {
           }}
           loop={true}
         >
-          <SwiperSlide><img src='./small-PaintBrush.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./small-Boy.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./small-Otis.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./small-Cow.jpeg' /></SwiperSlide>
@@ -52,7 +51,6 @@ export const Carousel = () => {
             disableOnInteraction: false
           }}
         >
-          <SwiperSlide><img src='./PaintBrush.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./Boy.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./Otis.jpeg' /></SwiperSlide>
           <SwiperSlide><img src='./Cow.jpeg' /></SwiperSlide>
