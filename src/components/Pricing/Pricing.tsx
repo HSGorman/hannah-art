@@ -14,7 +14,7 @@ export const Pricing: React.VFC<PricingProps> = () => {
 	return (
 		<>
 			<Paper>
-				<Typography variant="h3" sx={{ m:1 }}>
+				<Typography variant="h3" sx={{ m: 1 }}>
 					Pricing
 				</Typography>
 				<TableContainer component={Paper}>
@@ -38,8 +38,13 @@ export const Pricing: React.VFC<PricingProps> = () => {
 						</TableBody>
 					</Table>
 				</TableContainer>
-				<Stack direction="row" spacing={1}>
-					<p>If you have any questions about pricing, please contact me by the using the contact form.</p>
+				<Stack direction="row" spacing={0}>
+					<Typography variant="pw" sx={{ m: 3, justify: "center" }}>
+						All prices are estimates and will depend on what is being painted.
+					</Typography>
+					<Typography variant="p" sx={{ m: 3, justify: "center" }}>
+						If you have any questions about pricing, please contact me by the using the contact form.
+					</Typography>
 				</Stack>
 
 			</Paper>
