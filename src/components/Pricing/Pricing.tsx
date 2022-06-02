@@ -39,10 +39,10 @@ export const Pricing: React.VFC<PricingProps> = () => {
 					</Table>
 				</TableContainer>
 				<Stack direction="row" spacing={0}>
-					<Typography variant="pw" sx={{ m: 3, justify: "center" }}>
+					<Typography variant="subtitle1" sx={{ m: 3, justify: "center" }}>
 						All prices are estimates and will depend on what is being painted.
 					</Typography>
-					<Typography variant="p" sx={{ m: 3, justify: "center" }}>
+					<Typography variant="subtitle1" sx={{ m: 3, justify: "center" }}>
 						If you have any questions about pricing, please contact me by the using the contact form.
 					</Typography>
 				</Stack>

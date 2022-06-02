@@ -37,7 +37,7 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 					<Grid item xs={12} sx={{ ml: 2, mr: 2, mt: 1, mb: 1 }}>
 						<TextField 
 							fullWidth
-							label="EMail"
+							label="Email"
 							autoComplete="email"
 							value={email}
 							onChange={(e) => {setEmail(e.target.value)}}/>

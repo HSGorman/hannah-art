@@ -15,3 +15,6 @@
 # vendor/
 node_modules
 dist
+sendgrid.env
+
+*.info
