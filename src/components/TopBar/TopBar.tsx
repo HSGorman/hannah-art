@@ -8,7 +8,8 @@ export interface TopBarProps { }
 export const TopBar: React.VFC<TopBarProps> = () => {
 	const navigate = useNavigate();
 
-	const pages = ['Home', 'Contact', 'Pricing', 'FAQ'];
+	// const pages = ['Home', 'Contact', 'Pricing', 'FAQ'];
+	const pages = ['Home'];
 	const socialmedia: string[] = [];
 	const siteName = 'Hannah Gorman Paintings';
 
@@ -108,7 +109,7 @@ export const TopBar: React.VFC<TopBarProps> = () => {
 					<h2 className="fancy">{siteName}</h2>
 
 					<Grid sx={{ m: 2 }}>
-						<img src="../../../public/Logo1-small.png" />
+						<img src="../../../Logo1-small.png" />
 					</Grid>
 					
 				</Toolbar>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../../../styles/image.scss';
 import { flexbox } from "@mui/system";
 import { useState } from "react";
-import { sendEmail } from "../../SendMail";
+import { sendMessage } from "../../SendMessage";
 
 export interface ContactMeSmallProps {
 	sizeOptions: string[],
@@ -90,7 +90,7 @@ export const ContactMeSmall: React.VFC<ContactMeSmallProps> = ({ sizeOptions, ca
 			<Grid item xs={12} sx={{ ml: 3, mr: 3, mt: 2, mb: 1 }} >
 				<Button variant="contained" fullWidth
 					onClick={(e) => {
-						sendEmail(name, email, canvasType, canvasSize, additional);
+						sendMessage(name, email, canvasType, canvasSize, additional);
 					}}>Send</Button>
 			</Grid>
 		</Grid>

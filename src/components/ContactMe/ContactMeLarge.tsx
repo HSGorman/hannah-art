@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../../../styles/image.scss';
 import '../../../styles/shadow-drop.scss';
 import { useState } from "react";
-import { sendEmail } from "../../SendMail";
+import { sendMessage } from "../../SendMessage";
 
 export interface ContactMeLargeProps {
 	sizeOptions: string[],
@@ -89,7 +89,7 @@ export const ContactMeLarge: React.VFC<ContactMeLargeProps> = ({sizeOptions, can
 							variant="contained"
 							fullWidth
 							onClick={(e) => {
-								sendEmail(name, email, canvasType, canvasSize, additional);
+								sendMessage(name, email, canvasType, canvasSize, additional);
 							}}>Send</Button>
 					</Grid>
 				</Grid>

@@ -11,7 +11,7 @@ import { ContactMe } from './components/ContactMe'
 import { About } from './components/About'
 import { Faq } from './components/Faq'
 import { Gallery } from './components/Gallery'
-import { Pricing } from './components/Pricing'
+// import { Pricing } from './components/Pricing'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,7 +33,7 @@ function App() {
               <Route path={`${baseUrl}/`} element={<Carousel />} />
               <Route path={`${baseUrl}/Home`} element={<Carousel />} />
               <Route path={`${baseUrl}/Contact`} element={<ContactMe />} />
-              <Route path={`${baseUrl}/Pricing`} element={<Pricing />} />
+              {/* <Route path={`${baseUrl}/Pricing`} element={<Pricing />} /> */}
               <Route path={`${baseUrl}/Gallery`} element={<Gallery />} />
               <Route path={`${baseUrl}/Faq`} element={<Faq />} />
               <Route path={`${baseUrl}/About`} element={<About />} />
